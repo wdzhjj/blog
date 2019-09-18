@@ -45,3 +45,6 @@ Route::get('/detail/id/{id}','BlogController@detail')
 //富文本图片上传
 Route::any('/Upload','adminController@blog_upload');
 Route::any('/WangUploadImg','adminController@WangUploadImg');
+
+//发送邮件
+Route::get('/Mail','MailController@index');
