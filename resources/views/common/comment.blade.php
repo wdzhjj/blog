@@ -54,7 +54,7 @@
 <!-- Comment Respond of the page -->
 <section class="comment-respond wow fadeInUp" data-wow-delay="0.4s">
     <header class="header">
-        <h3 id="reply-title" class="comment-reply-title">留下你的看法</h3>
+        <h3  id="reply-title" class="comment-reply-title">留下你的看法</h3>
         <p>show what you think</p>
         <p id="errors" style="color:red;font-weight: bold">@foreach($errors->all() as $error)
                 {{ $error }}
@@ -80,12 +80,14 @@
         </div>
     </form>
 </section>
+<input  type="hidden" name="#reply"/>
 <!-- Comment Respond of the page end -->
 
 <script>
     function ajax_comment(){
         var comment = $("#comment").val();
         var comment_post_ID = $("#comment_post_ID").val();
+        var id = "<?php echo $data['id']; ?>";
         // var comment_parent = $("#comment_parent").val();
         // var userid = $("#userid").val();
         // var token = $("input[name='_token']").val();
@@ -105,6 +107,7 @@
                 if(dataObj.error == 0){
                     $("#errors").html('回复成功');
                     $("#comment").val('');
+                    window.location.href = "/detail/id/" + id + "#reply";
                 }
             }
         });

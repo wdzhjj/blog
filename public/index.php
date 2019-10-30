@@ -20,7 +20,6 @@
 */
 
 require __DIR__.'/../bootstrap/autoload.php';
-
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights
@@ -32,6 +31,7 @@ require __DIR__.'/../bootstrap/autoload.php';
 | the responses back to the browser and delight our users.
 |
 */
+
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
@@ -47,12 +47,21 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 |
 */
 
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+//调用容器的 make 方法  获得了 http 处理器 ( $kernel )
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);   //容器解析 kernel对象 初始化
 
 $response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
+    //先用 Illuminate\Http\Request::capture() 抓出一个 Illuminate\Http\Request HTTP请求对象
+    //作用是 HTTP请求过来的参数 按照 k=》value 格式生成Symfony\Component\HttpFoundation\ParameterBag 对象。
+    //然后将包含 ParameterBag 的 $request 对象交给 Illuminate\Http\Request::createFromBase()
+    $request = Illuminate\Http\Request::capture()           // 捕获请求
 );
 
-$response->send();
+//调用 Illuminate\Http\Response 的 send 方法，将响应的状态码/头/内容返回给客户端(浏览器)，
+$response->send();                                          //发送请求
 
-$kernel->terminate($request, $response);
+$kernel->terminate($request, $response);                    //kernel终止
+
+
+
+

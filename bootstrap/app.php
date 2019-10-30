@@ -11,6 +11,8 @@
 |
 */
 
+// $app 框架的应用对象 此对象继承于 Illuminate\Container\Container(容器)
+// laravel框架中的容器对象一般就是指的  Illuminate\Founation\Application 对象
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
@@ -26,6 +28,8 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+//这里的 singleton 是 public/index.php 中，用 Illuminate\Contracts\Http\Kernel能注入后取出
+//App\Http\Kernel的关键
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
@@ -52,4 +56,5 @@ $app->singleton(
 |
 */
 
+//把app对象还给 index.php
 return $app;

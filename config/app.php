@@ -38,8 +38,8 @@ return [
     |
     */
 
-//    'debug' => env('APP_DEBUG', true),
-    'debug' => env('APP_DEBUG', false),
+   'debug' => env('APP_DEBUG', true),   
+    // 'debug' => env('APP_DEBUG', false),    //生产环境应该保证一直为false true会暴露敏感数据
 
     /*
     |--------------------------------------------------------------------------

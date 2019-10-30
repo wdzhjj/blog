@@ -3,6 +3,9 @@ Route::group(['prefix' => 'admin'],function(){
     Route::any('/login','\App\Admin\AdminController@login');
     Route::get('/logout','\App\Admin\AdminController@logout');
     //验证后台是否登录
+
+    //admin_check 验证是否已经登录  通过session来验证
+    //permission 验证用户是否具有操作权限   通过session  admin_user_id 来验证
     Route::group(['middleware' => ['admin_check','permission']], function(){
         Route::get('/test','\App\Admin\AdminController@test');
         Route::get('/blog/list','\App\Admin\AdminController@blog_list');

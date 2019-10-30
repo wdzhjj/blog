@@ -16,6 +16,7 @@ include_once("singleDog.php");
 //Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/','BlogController@index');
 Route::get('/movie','BlogController@movie');
 Route::get('/study','BlogController@study');
@@ -48,3 +49,37 @@ Route::any('/WangUploadImg','adminController@WangUploadImg');
 
 //发送邮件
 Route::get('/Mail','MailController@index');
+
+
+
+//test
+//Route::get('/test',function(){
+//    echo "its test page";
+//})->middleware("test");
+Route::get('/test',function(){
+    $array = array('wdz','hjj');
+    return view("test/demo2")->with('array',$array);
+});
+
+//test auth
+Route::any('/auth',function(){
+    return view('auth/login');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

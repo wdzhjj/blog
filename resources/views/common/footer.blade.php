@@ -50,8 +50,15 @@
                         </a>
                     </div>
                     <!-- logo of the page end -->
-                    <p><h3>Try so hard , use time to exchange money , and use money to waste life .
-                        I found i need stop , but i didn,t . maybe someday I stopped , then I can found myself</h3></p>
+<!--                     <p><h3>Try so hard , use time to exchange money , and use money to waste life .
+                        I found i need stop , but i didn,t . maybe someday I stopped , then I can found myself</h3></p> -->
+                    <p><h3>new life start when you,re ready to change.<br/>
+
+                        never stop thinking or think to much to stop your steps. 
+
+                        i can,t be the best guy but i can be my guy
+
+                    </h3></p>
                     <!-- Social Network of the page -->
                     <ul class="social-networks">
                         {{--<li><a href="#"><span class="ico-facebook"></span></a></li>--}}
@@ -64,13 +71,13 @@
                 </div>
                 <!-- footer nav of the page -->
                 <nav class="col footer-nav">
-                    <h3>to do list in 2018.12</h3>
+                    <h3>to do list in 2019-2020</h3>
                     <ul>
-                        <li><h5><a>1、学习自由泳</a></h5></li>
-                        <li><h5><a>2、学习滑板</a></h5></li>
-                        <li><h5><a>3、买单反，学习摄影</a></h5></li>
-                        <li><h5><a>4、验血复检</a></h5></li>
-                        <li><h5><a>5、回家取证</a></h5></li>
+                        <li><h5><a>1、去北京待半个月，出国旅游10天</a></h5></li>
+                        <li><h5><a>2、12点前睡觉，7点起床</a></h5></li>
+                        <li><h5><a>3、学习滑板，吉他</a></h5></li>
+                        <li><h5><a>4、减肥到65KG</a></h5></li>
+                        <li><h5><a>5、养猫猫</a></h5></li>
                     </ul>
                 </nav>
                 <!-- footer nav of the page end -->
@@ -114,7 +121,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <p>Copyright &copy; 2018.卫道者的博客.<a target="_blank"></a></p>
+                <p>Copyright &copy; 2019.卫道者的博客.<a target="_blank"></a></p>
             </div>
         </div>
     </div>

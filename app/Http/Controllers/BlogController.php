@@ -10,7 +10,7 @@ use App\Userinfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class BlogController extends Controller
+class authorBlogController extends Controller
 {
     //用来查看最近一次调试的sql语句
     //DB::listen(function($sql, $bindings, $time) {
@@ -122,6 +122,11 @@ class BlogController extends Controller
     public function detail(Request $request){
         Session::put('userid',1);
         $data = Blog::find($request->id);
+		// $data = Blog::where("private","!=","1")->where("id","=",$request->id)->get();
+        // if(!$data){
+			// return view(404);
+			// exit;
+		// }
         $type = $data->type;
         $author = $data->author['nickname'];
         $top = blog::where('user_id','=',1)->where('top','=',1)->get();
