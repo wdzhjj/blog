@@ -10,7 +10,7 @@ use App\Userinfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class authorBlogController extends Controller
+class BlogController extends Controller
 {
     //用来查看最近一次调试的sql语句
     //DB::listen(function($sql, $bindings, $time) {
